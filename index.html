@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главное</a></li>
+                <li><a href="heroes.html">Герои</a></li>
+                <li><a href="gallery.html">Галерея</a></li>
+                <li><a href="test.html">Тест</a></li>
+                <li><a href="glossary.html" id="current">Словарь</a></li>
+                <li><a href="description.html">Описание</a></li>
+                <li><a href="profile.html">профиль</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="registrationModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Регистрация</h2>
+            <div class="slide">
+                <form name="auth" novalidate id="registrationForm">
+                    <div>
+                        <label for="nameInput">Имя</label>
+                        <input type="text" id="nameInput" name="name" pattern="^[А-ЯЁ][а-яё]+" required>
+                    </div>
+                    <div>
+                        <label for="dateInput">Дата рождения</label>
+                        <input type="date" name="date" id="dateInput" min="1900-01-01" max="2024-11-02" required>
+                    </div>
+                    <div>
+                        <label>Пол:</label><br>
+                        <input type="radio" name="gender" value="Мужской" checked="true"> Мужской<br>
+                        <input type="radio" name="gender" value="Женский"> Женский<br>
+                    </div>
+                    <input type="submit" value="Зарегистрироваться">
+                </form>
+            </div>
+        </div>
+    </div>
+    <main>
+        <div id="profile-slide" class="profile-slide">
+            <div class="profile-info">
+                <div id="name"></div>
+                <div id="date"></div>
+                <div id="gender"></div>
+                <button id="editProfile">Редактировать профиль</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div>Контакты: <a href="tel:+7945582409">Телефон</a> | <a href="#">Соц. сети</a></div>
+        <div>&copy; 2024 [Начын.М]</div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

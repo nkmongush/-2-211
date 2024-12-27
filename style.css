@@ -1,0 +1,502 @@
+/* Общие стили */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Заголовки */
+h1,
+h2,
+h3 {
+    color: #ffb347;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+/* Стили для ссылок */
+a {
+    color: #ffcc80;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ffa500;
+    text-decoration: underline;
+}
+
+/* Стили для меню */
+header {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo img {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a.active {
+    background-color: #ffa500;
+}
+
+nav ul li a:hover {
+    background-color: #472a00;
+    text-decoration: none;
+}
+
+/* Стили для main контента */
+main {
+    padding: 20px 0;
+    min-height: calc(100vh - 100px);
+}
+
+main #content {
+    background-color: #2c2c2c;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Стили для вкладок*/
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    background-color: #472a00;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 0 5px;
+    border-radius: 5px 5px 0 0;
+    transition: background-color 0.3s ease;
+}
+
+.tab-button.active {
+    background-color: #ffa500;
+    color: white;
+}
+
+.tab-button:hover {
+    background-color: #663300;
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+    background-color: #2c2c2c;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Стили для форм*/
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #331d00;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+form div {
+    margin-bottom: 10px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="date"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #663300;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    background-color: #472a00;
+    color: white;
+}
+
+form input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* Стили для кнопок */
+.gallery-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #472a00;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.gallery-button:hover {
+    background-color: #663300;
+    opacity: 1;
+    /* Убираем opacity для кнопок галереи */
+}
+
+/*  Убираем hover для остальных кнопок*/
+button:hover {
+    opacity: 1;
+}
+
+/* Стили для кнопок в тесте */
+#quiz button {
+    background-color: #ffa500;
+    color: white;
+}
+
+#quiz button:hover {
+    background-color: #e68a00;
+}
+
+/* Стили для кнопок в профиле*/
+#editForm button,
+#profile-slide button {
+    background-color: #ffa500;
+    color: white;
+}
+
+#editForm button:hover,
+#profile-slide button:hover {
+    background-color: #e68a00;
+}
+
+/* Стили для таблицы*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th,
+td {
+    padding: 10px;
+    border: 1px solid #663300;
+    text-align: left;
+}
+
+th {
+    background-color: #472a00;
+    color: white;
+}
+
+/* Стили для списка */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background-color: #472a00;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li:hover {
+    background-color: #5f3700;
+}
+
+.term {
+    font-weight: bold;
+    color: #ffcc80;
+}
+
+/* Стили для словаря*/
+#search-term {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #663300;
+    border-radius: 5px;
+    background-color: #472a00;
+    color: white;
+}
+
+#search-button,
+#end-search-button {
+    background-color: #ffa500;
+    color: white;
+}
+
+#search-button:hover,
+#end-search-button:hover {
+    background-color: #e68a00;
+}
+
+#end-search-button {
+    display: none;
+}
+
+/* Стили для футера */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+}
+
+footer div {
+    margin: 5px;
+}
+
+/* Стили для модального окна */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    background-color: #331d00;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #663300;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 5px;
+    color: white;
+}
+
+.close-modal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* Стили для галереи */
+.gallery-container {
+    position: relative;
+    overflow: hidden;
+    /* Скрывает изображения, выходящие за пределы */
+    width: 100%;
+    /* или фиксированная ширина */
+    height: 800px;
+    /* или нужная высота */
+}
+
+.gallery-images {
+    display: flex;
+    /* Используйте Flexbox для размещения картинок в ряд */
+    transition: transform 0.5s ease-in-out;
+    /* Плавный переход при смене изображений */
+}
+
+.gallery-images img {
+    width: 100%;
+    /* Ширина изображения равна ширине контейнера */
+    height: auto;
+    /* Автоматическая высота для сохранения пропорций */
+}
+
+.gallery-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #472a00;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.gallery-button:hover {
+    background-color: #663300;
+}
+
+.gallery-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+#prevButton {
+    left: 10px;
+}
+
+#nextButton {
+    right: 10px;
+}
+
+/* Стили для страницы героев */
+.heroes-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Разрешаем переносить элементы на новую строку */
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.hero {
+    width: 300px;
+    margin: 20px;
+    text-align: center;
+    background-color: #331d00;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    text-align: left;
+    padding: 0 5px;
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    #logo img {
+        height: 40px;
+    }
+
+    form {
+        width: 90%;
+        max-width: none;
+    }
+
+    .tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tab-button {
+        margin: 5px 0;
+        border-radius: 5px;
+    }
+
+    li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #search-term,
+    #search-button {
+        margin: 5px 0;
+    }
+
+    .gallery-slide {
+        width: 270px;
+    }
+
+    .gallery-images img {
+        width: 250px;
+        margin: 0 5px;
+    }
+
+    .heroes-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero {
+        width: 80%
+    }
+}
